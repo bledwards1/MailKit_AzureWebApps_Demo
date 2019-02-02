@@ -30,7 +30,9 @@ namespace MailKitWebApp
                 // using (var client = new SmtpClient(new ProtocolLogger("D:\\home\LogFiles\\smtp.log")))
                 using (var client = new SmtpClient())
                 {
+                    // This is where you will input the email it is coming from (hint: your gmail address)
                     message.From.Add(new MailboxAddress("Name", "FromEmail"));
+                    // This is where you add in the recipient email (hint: you can test using your own gmail address as well)
                     message.To.Add(new MailboxAddress("Name", "ToEmail"));
                     message.Subject = "Google Test Message from web app";
 
